@@ -1,34 +1,36 @@
-# Build and run locally
+# Harness 0.0.1
+
+## Build and run locally
 
 ```
 ./gradlew bootTestRun
 ```
 
-# Build for Tomcat or other web server
+## Build for Tomcat or other web server
 
 ```
 ./gradlew bootWar
 ```
 
-# Build an executable jar
+## Build an executable jar
 
 ```
 ./gradlew bootJar
 ```
 
-# Build a docker image
+## Build a docker image
 
 ```
 ./gradlew bootBuildImage
 ```
 
-# Generate the liquibase master changelog from the current DB
+## Generate the liquibase master changelog from the current DB
 
 ```
 ./gradlew generateChangelog
 ```
 
-# Making the project run with Tomcat 10 from IntelliJ Ultimate
+## Making the project run with Tomcat 10 from IntelliJ Ultimate
 
 Assuming the project is in c:\projects\harness, edit catalina.bat of your c:\apps\apache-tomcat\
 
