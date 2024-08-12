@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      layout:decorate="~{layout}">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Linked Victims</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+</head>
+<body>
+<div layout:fragment="content">
+    <h1>Linked Victims</h1>
+
+    <div th:if="${#lists.isEmpty(victims)}">
+        You don't have any linked victims, yet.
+    </div>
+
+    <ul>
+        <li th:if="${not #lists.isEmpty(victims)}" th:each="victim : ${victims}">
+            <a th:href="@{'/linked-victims/' + ${victim.username}}" th:text="${victim.username}" />
+        </li>
+    </ul>
+</div>
+</body>
+</html>

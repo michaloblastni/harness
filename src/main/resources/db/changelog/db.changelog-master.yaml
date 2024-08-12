@@ -1,0 +1,125 @@
+databaseChangeLog:
+  - changeSet:
+      id: 1722862055418-1
+      author: michaloblastni (generated)
+      changes:
+        - createTable:
+            columns:
+              - column:
+                  autoIncrement: true
+                  constraints:
+                    nullable: false
+                    primaryKey: true
+                    primaryKeyName: message_pkey
+                  name: id
+                  type: BIGINT
+              - column:
+                  constraints:
+                    nullable: false
+                  name: content
+                  type: VARCHAR(255)
+            tableName: message
+  - changeSet:
+      id: 1722862055418-2
+      author: michaloblastni (generated)
+      changes:
+        - addUniqueConstraint:
+            columnNames: content
+            constraintName: message_content_key
+            tableName: message
+  - changeSet:
+      id: 1722862055418-3
+      author: michaloblastni (generated)
+      changes:
+        - createSequence:
+            cacheSize: 1
+            cycle: false
+            dataType: bigint
+            incrementBy: 1
+            maxValue: 9223372036854775807
+            minValue: 1
+            sequenceName: message_seq
+            startValue: 1
+  - changeSet:
+      id: 1722862055418-4
+      author: michaloblastni (generated)
+      changes:
+        - createTable:
+            columns:
+              - column:
+                  autoIncrement: true
+                  constraints:
+                    nullable: false
+                    primaryKey: true
+                    primaryKeyName: victim_pkey
+                  name: id
+                  type: BIGINT
+              - column:
+                  name: message
+                  type: VARCHAR(255)
+              - column:
+                  constraints:
+                    nullable: false
+                  name: username
+                  type: VARCHAR(40)
+              - column:
+                  constraints:
+                    nullable: false
+                  name: password
+                  type: VARCHAR(80)
+              - column:
+                  name: email
+                  type: VARCHAR(40)
+            tableName: victim
+  - changeSet:
+      id: 1722862055418-5
+      author: michaloblastni (generated)
+      changes:
+        - createTable:
+            columns:
+              - column:
+                  constraints:
+                    nullable: false
+                    primaryKey: true
+                    primaryKeyName: pk_victim_message
+                  name: victim_id
+                  type: BIGINT
+              - column:
+                  constraints:
+                    nullable: false
+                    primaryKey: true
+                    primaryKeyName: pk_victim_message
+                  name: message_id
+                  type: BIGINT
+            tableName: victim_message
+  - changeSet:
+      id: 1722862055418-6
+      author: michaloblastni (generated)
+      changes:
+        - addForeignKeyConstraint:
+            baseColumnNames: message_id
+            baseTableName: victim_message
+            constraintName: fk_victim_message
+            deferrable: false
+            initiallyDeferred: false
+            onDelete: NO ACTION
+            onUpdate: NO ACTION
+            referencedColumnNames: id
+            referencedTableName: message
+            validate: true
+  - changeSet:
+      id: 1722862055418-7
+      author: michaloblastni (generated)
+      changes:
+        - addForeignKeyConstraint:
+            baseColumnNames: victim_id
+            baseTableName: victim_message
+            constraintName: fk_victim_victim
+            deferrable: false
+            initiallyDeferred: false
+            onDelete: NO ACTION
+            onUpdate: NO ACTION
+            referencedColumnNames: id
+            referencedTableName: victim
+            validate: true
+

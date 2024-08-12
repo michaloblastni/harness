@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      layout:decorate="~{layout}">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Linked Victims</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+</head>
+<body>
+<div layout:fragment="content">
+    <h1 th:text="${victim.username} + '\'s Messages'" />
+
+    <p>Get in touch with this user at: <strong th:text="${victim.email}" /></p>
+
+    <ul>
+        <li th:each="message : ${victim.messages}">
+            <p th:text="${message.content}" />
+        </li>
+    </ul>
+
+    <a th:href="@{/linked-victims/}" class="btn btn-primary">Back to linked victims</a>
+</div>
+</body>
+</html>

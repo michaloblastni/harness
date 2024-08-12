@@ -1,0 +1,12 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Error page</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="css/main.css" th:href="@{/css/main.css}" />
+</head>
+<p th:if="${message != null}" th:utext="${message}"></p>
+<p th:if="${message == null}">No error message available</p>
+<a href="@{/}" th:href="@{/}">Back to Home Page</a>
+</body>
+</html>

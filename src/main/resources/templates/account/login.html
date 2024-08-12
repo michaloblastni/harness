@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      layout:decorate="~{layout}">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+</head>
+<body>
+<div layout:fragment="content">
+    <h1>Login</h1>
+
+    <div th:if="${error}" class="alert alert-danger">
+        <p th:text="${error}"></p>
+    </div>
+
+    <form method="post" th:action="@{/account/login}" class="form-signin" style="margin-bottom:-20px">
+        <div class="form-group" th:classappend="${error != null} ? ' has-error' : ''">
+            <span th:text="${message}"></span>
+            <input name="username" type="text" class="form-control" placeholder="Username" autofocus="true"/>
+            <input name="password" type="password" class="form-control" placeholder="Password"/>
+
+            <input type="hidden" name="${_csrf.parameterName}" th:value="${_csrf.token}"/>
+
+            <button class="btn btn-lg btn-primary btn-block" type="submit">Sign in</button>
+
+            <label id="rememberMe" class="checkbox pull-left" for="remember">
+                <input id="remember" name="remember" type="checkbox" value="remember-me" checked/>
+                Remember me
+            </label>
+        </div>
+    </form>
+
+    <br>
+    <div style="clear:both"></div>
+    <a id="createAccount" th:href="@{/account/registration}">Create an account</a>
+</div>
+</body>
+</html>

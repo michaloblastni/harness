@@ -1,0 +1,35 @@
+version: '3.8'
+services:
+  postgres:
+    image: postgres:15
+    environment:
+      - 'POSTGRES_USER=myuser'
+      - 'POSTGRES_PASSWORD=secret'
+      - 'POSTGRES_DB=mydatabase'
+    volumes:
+      - postgres-db-volume:/var/lib/postgresql/data
+    ports:
+      - 5432:5432
+    networks:
+      - postgres-db-network
+  pgadmin:
+    image: dpage/pgadmin4
+    environment:
+      PGADMIN_DEFAULT_EMAIL: 'engineering@acme.com'
+      PGADMIN_DEFAULT_PASSWORD: '123456'
+    ports:
+      - 8085:80
+    volumes:
+      - ./pgadmin-data:/var/lib/pgadmin
+    networks:
+      - postgres-db-network
+volumes:
+  postgres-db-volume:
+    driver: local
+    driver_opts:
+      type: none
+      o: bind
+      device: ./data
+networks:
+  postgres-db-network:
+    driver: bridge

@@ -1,0 +1,84 @@
+buildscript {
+	repositories {
+		mavenCentral()
+	}
+	dependencies {
+		classpath 'org.liquibase:liquibase-core:4.29.1'
+	}
+}
+
+plugins {
+	id 'java'
+	id 'org.springframework.boot' version '3.3.2'
+	id 'io.spring.dependency-management' version '1.1.6'
+	id 'org.liquibase.gradle' version '3.0.0'
+	id 'war'
+}
+
+group 'com.bci'
+version '0.0.1-SNAPSHOT'
+
+java {
+	toolchain {
+		languageVersion = JavaLanguageVersion.of(17)
+	}
+}
+
+configurations {
+	compileOnly {
+		extendsFrom annotationProcessor
+	}
+}
+
+repositories {
+	mavenCentral()
+}
+
+dependencies {
+	liquibaseRuntime 'org.liquibase:liquibase-core:4.29.1'
+	liquibaseRuntime 'org.liquibase:liquibase-groovy-dsl:3.0.2'
+	liquibaseRuntime 'info.picocli:picocli:4.6.1'
+	liquibaseRuntime 'org.postgresql:postgresql:42.7.3'
+	implementation 'org.springframework.boot:spring-boot-starter-data-jpa'
+	implementation 'org.springframework.boot:spring-boot-starter-thymeleaf'
+	implementation 'org.springframework.boot:spring-boot-starter-security'
+	implementation 'org.springframework.boot:spring-boot-starter-actuator'
+	implementation 'org.springframework.boot:spring-boot-starter-validation'
+	implementation 'org.springframework.boot:spring-boot-starter-logging'
+	implementation 'org.springframework.boot:spring-boot-starter-web'
+	implementation 'org.liquibase:liquibase-core:4.29.1'
+	implementation 'org.springframework.security:spring-security-taglibs'
+	implementation 'nz.net.ultraq.thymeleaf:thymeleaf-layout-dialect'
+	implementation 'org.thymeleaf.extras:thymeleaf-extras-springsecurity6'
+	compileOnly 'org.projectlombok:lombok'
+	developmentOnly 'org.springframework.boot:spring-boot-devtools'
+	developmentOnly 'org.springframework.boot:spring-boot-docker-compose'
+	runtimeOnly 'org.postgresql:postgresql'
+	annotationProcessor 'org.projectlombok:lombok'
+	testImplementation 'org.springframework.boot:spring-boot-starter-test'
+	testImplementation 'org.springframework.security:spring-security-test'
+    testRuntimeOnly 'com.h2database:h2'
+	testRuntimeOnly 'org.junit.platform:junit-platform-launcher'
+}
+
+test {
+	useJUnitPlatform()
+}
+
+compileJava {
+	options.compilerArgs += ["-parameters"]
+}
+
+war {
+    archiveBaseName.set('Harness')
+    archiveVersion.set('0.0.1-SNAPSHOT')
+}
+
+liquibase {
+	activities {
+		main {
+			'classpath' configurations.runtimeClasspath.asPath
+		}
+	}
+	runList = 'main'
+}
