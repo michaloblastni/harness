@@ -7,6 +7,8 @@ These linked victims will then be able to talk with each other and discuss i.e. 
 
 This project will be deployed on some free hosting where targeted individuals can freely register and use it.
 
+## Questions?
+Ask at https://github.com/michaloblastni/harness/discussions/1
 ## Build and run locally
 
 ```
