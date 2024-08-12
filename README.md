@@ -1,4 +1,11 @@
 # Harness 0.0.1
+This project allows targeted individuals to register and fill the messages (insults, threats, disinformation) they hear. As soon as 2 or more targeted individuals have filled they hear the same message, they become linked.
+Linked victims can read each other's full list of messages they hear, and they can email each other.
+This allows victims who hear the same repetitive messages to find each other.
+
+These linked victims will then be able to talk with each other and discuss i.e. who they suspect is the agent doing it to all of them. They can find out if he talks like that, while they will each have the written messages. And they can use it as an empirical evidence against him. Together, linked victims of the same agent can report it incl. the insults they hear, and including any witnesses they find that the person they suspect talks like that.
+
+This project will be deployed on some free hosting where targeted individuals can freely register and use it.
 
 ## Build and run locally
 
