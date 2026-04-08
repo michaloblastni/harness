@@ -1,0 +1,59 @@
+<?php
+/** @var bool $notifyEmailOnNewLink */
+/** @var string $registeredEmail */
+/** @var bool $saved */
+/** @var bool $password_saved */
+/** @var bool $canChangePassword */
+$notifyEmailOnNewLink = $notifyEmailOnNewLink ?? true;
+$registeredEmail = $registeredEmail ?? '';
+$saved = $saved ?? false;
+$password_saved = $password_saved ?? false;
+$canChangePassword = $canChangePassword ?? false;
+?>
+<div class="max-w-lg">
+    <p class="text-sm font-semibold text-sky-700"><?= h(tr('Settings')) ?></p>
+    <h1 class="mt-2 text-2xl font-bold tracking-tight text-slate-900"><?= h(tr('Account settings')) ?></h1>
+    <p class="mt-2 text-sm text-slate-600"><?= h(tr('Manage notification preferences for your Harness account.')) ?></p>
+
+    <?php if (!empty($passwordErrors['general'])): ?>
+        <div class="mt-4 rounded-lg border border-red-200 bg-red-50 px-4 py-3 text-sm text-red-800"><?php foreach ($passwordErrors['general'] as $msg) {
+            echo '<p>' . h($msg) . '</p>';
+        } ?></div>
+    <?php endif; ?>
+
+    <?php if (!empty($saved)): ?>
+        <div class="mt-4 rounded-lg border border-emerald-200 bg-emerald-50 px-4 py-3 text-sm text-emerald-900"><?= h(tr('Your settings were saved.')) ?></div>
+    <?php endif; ?>
+    <?php if (!empty($password_saved)): ?>
+        <div class="mt-4 rounded-lg border border-emerald-200 bg-emerald-50 px-4 py-3 text-sm text-emerald-900"><?= h(tr('Your password was changed.')) ?></div>
+    <?php endif; ?>
+
+    <form action="/settings" method="post" class="mt-8 space-y-6">
+        <fieldset class="rounded-xl border border-slate-200 bg-slate-50/80 p-5">
+            <legend class="px-1 text-sm font-semibold text-slate-900"><?= h(tr('Email notifications')) ?></legend>
+            <p class="mt-1 text-xs text-slate-500">
+                <span class="font-medium text-slate-600"><?= h(tr('Registered email')) ?>:</span>
+                <?= h($registeredEmail) ?>
+            </p>
+            <label class="mt-4 flex cursor-pointer items-start gap-3">
+                <input type="hidden" name="notify_email_on_new_link" value="0"/>
+                <input class="mt-1 rounded border-slate-300 text-brand-600 focus:ring-brand-500" type="checkbox" name="notify_email_on_new_link" value="1" <?= $notifyEmailOnNewLink ? 'checked' : '' ?>/>
+                <span>
+                    <span class="block text-sm font-medium text-slate-800"><?= h(tr('Email me when someone new becomes linked with me')) ?></span>
+                    <span class="mt-1 block text-xs leading-relaxed text-slate-500"><?= h(tr('We send mail to your registered address when you and another user share the same saved line—whether they just matched yours or you just matched theirs.')) ?></span>
+                </span>
+            </label>
+        </fieldset>
+
+        <input type="hidden" name="_csrf" value="<?= h($csrf) ?>"/>
+        <button class="w-full rounded-xl bg-gradient-to-r from-sky-600 to-indigo-600 py-3 text-center text-base font-semibold text-white shadow-md shadow-sky-600/20 hover:from-sky-500 hover:to-indigo-500 sm:w-auto sm:px-8" type="submit"><?= h(tr('Save settings')) ?></button>
+    </form>
+
+    <?php if ($canChangePassword): ?>
+        <p class="mt-10">
+            <a class="text-sm font-semibold text-brand-600 hover:text-brand-800" href="/settings/password"><?= h(tr('Change password')) ?></a>
+        </p>
+    <?php else: ?>
+        <p class="mt-10 rounded-xl border border-slate-200 bg-slate-50/80 p-4 text-sm text-slate-600"><?= h(tr('Password change is not available for accounts that sign in only with Google.')) ?></p>
+    <?php endif; ?>
+</div>

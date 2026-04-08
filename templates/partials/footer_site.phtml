@@ -1,0 +1,19 @@
+<?php
+$footerMarginClass = $footerMarginClass ?? 'mt-12';
+$footerLinks = [
+    '/' => tr('Home'),
+    '/privacy-policy' => tr('Privacy Policy'),
+    '/how-it-works' => tr('How it works'),
+    '/support' => tr('Support'),
+];
+?>
+<footer class="<?= h($footerMarginClass) ?> flex flex-wrap justify-center gap-x-6 gap-y-2 text-sm text-slate-500">
+<?php foreach ($footerLinks as $href => $label):
+    $active = harness_footer_nav_is_active($href);
+    $linkClass = $active
+        ? 'font-medium text-slate-700 transition hover:text-brand-600'
+        : 'transition hover:text-brand-600';
+    ?>
+    <a class="<?= h($linkClass) ?>" href="<?= h($href) ?>"<?= $active ? ' aria-current="page"' : '' ?>><?= h($label) ?></a>
+<?php endforeach; ?>
+</footer>

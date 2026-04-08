@@ -1,0 +1,83 @@
+<?php
+/**
+ * @var array{
+ *   phrases_recorded:int,
+ *   linked_members:int,
+ *   linking_phrases:int,
+ *   recent_phrases:list<array{id:int,content:string}>
+ * } $dashboard
+ */
+$d = $dashboard;
+?>
+<header class="mb-10 border-b border-slate-100 pb-8">
+    <p class="text-sm font-semibold text-sky-700"><?= h(tr('Your home')) ?></p>
+    <h1 class="mt-2 text-3xl font-bold tracking-tight text-slate-900 sm:text-4xl"><?= h(tr('Welcome')) ?></h1>
+    <p class="mt-4 max-w-xl text-base leading-relaxed text-slate-600"><?= h(tr('Save what you heard, word for word. When someone else saves the same line, Harness helps you find each other—in private, and only when the text matches exactly.')) ?></p>
+</header>
+
+<section class="mb-10 rounded-2xl border border-indigo-100 bg-gradient-to-br from-indigo-50/40 via-white to-sky-50/40 p-6 ring-1 ring-indigo-900/[0.04]" aria-labelledby="how-it-works-heading">
+    <h2 id="how-it-works-heading" class="text-lg font-semibold text-slate-900"><?= h(tr('How matching works')) ?></h2>
+    <p class="mt-3 max-w-2xl text-sm leading-relaxed text-slate-600"><?= h(tr('When two people save the exact same line of text, Harness can link their accounts in private. Matching is literal: the text must match word for word.')) ?></p>
+    <a href="/how-it-works" class="mt-4 inline-flex text-sm font-semibold text-brand-600 hover:text-brand-800"><?= h(tr('Open full guide')) ?></a>
+</section>
+
+<div class="mb-10 grid gap-4 sm:grid-cols-3" role="region" aria-label="<?= h(tr('Summary')) ?>">
+    <div class="group relative overflow-hidden rounded-2xl border border-slate-100 bg-gradient-to-br from-white to-sky-50/50 p-5 shadow-md shadow-slate-200/40 ring-1 ring-slate-900/[0.03]">
+        <div class="absolute right-4 top-4 flex h-10 w-10 items-center justify-center rounded-xl bg-sky-500/10 text-sky-600" aria-hidden="true">
+            <svg class="h-5 w-5" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M19.5 14.25v-2.625a3.375 3.375 0 00-3.375-3.375h-1.5A1.125 1.125 0 0113.5 7.125v-1.5a3.375 3.375 0 00-3.375-3.375H8.25m0 12.75h7.5m-7.5 3H12M10.5 8.25H3.375m0 0H7.5m0 0v3.75m0-3.75h3.375m-3.375 0h-3.375"/></svg>
+        </div>
+        <p class="text-xs font-medium text-slate-500"><?= h(tr('Your saves')) ?></p>
+        <p class="mt-2 text-3xl font-bold tabular-nums text-slate-900" aria-live="polite"><?= (int) $d['phrases_recorded'] ?></p>
+        <p class="mt-1 text-xs text-slate-500"><?= h(tr('Lines you added')) ?></p>
+    </div>
+    <div class="group relative overflow-hidden rounded-2xl border border-slate-100 bg-gradient-to-br from-white to-violet-50/40 p-5 shadow-md shadow-slate-200/40 ring-1 ring-slate-900/[0.03]">
+        <div class="absolute right-4 top-4 flex h-10 w-10 items-center justify-center rounded-xl bg-violet-500/10 text-violet-600" aria-hidden="true">
+            <svg class="h-5 w-5" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M18 18.72a9.09 9.09 0 003.741-.479 3 3 0 00-4.682-2.72m.94 3.198l.001.031c0 .225-.012.447-.037.666A11.944 11.944 0 0112 21c-2.17 0-4.207-.576-5.963-1.584A6.062 6.062 0 016 18.719m12 0a5.971 5.971 0 00-.941-3.197m0 0A5.995 5.995 0 0012 12.75a5.995 5.995 0 00-5.058 2.772m0 0a3 3 0 00-4.681 2.72 8.986 8.986 0 003.74.477m.94-3.197a5.971 5.971 0 00-.94 3.197M15 6.75a3 3 0 11-6 0 3 3 0 016 0zm6 3a2.25 2.25 0 11-4.5 0 2.25 2.25 0 014.5 0zm-13.5 0a2.25 2.25 0 11-4.5 0 2.25 2.25 0 014.5 0z"/></svg>
+        </div>
+        <p class="text-xs font-medium text-slate-500"><?= h(tr('Linked victims')) ?></p>
+        <p class="mt-2 text-3xl font-bold tabular-nums text-slate-900"><?= (int) $d['linked_members'] ?></p>
+        <p class="mt-1 text-xs text-slate-500"><?= h(tr('Victims who share at least one exact line with you')) ?></p>
+    </div>
+    <div class="group relative overflow-hidden rounded-2xl border border-slate-100 bg-gradient-to-br from-white to-emerald-50/40 p-5 shadow-md shadow-slate-200/40 ring-1 ring-slate-900/[0.03]">
+        <div class="absolute right-4 top-4 flex h-10 w-10 items-center justify-center rounded-xl bg-emerald-500/10 text-emerald-600" aria-hidden="true">
+            <svg class="h-5 w-5" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M7.5 21L3 16.5m0 0L7.5 12M3 16.5h13.5m0-13.5L21 7.5m0 0L16.5 12M21 7.5H7.5"/></svg>
+        </div>
+        <p class="text-xs font-medium text-slate-500"><?= h(tr('Matches')) ?></p>
+        <p class="mt-2 text-3xl font-bold tabular-nums text-slate-900"><?= (int) $d['linking_phrases'] ?></p>
+        <p class="mt-1 text-xs text-slate-500"><?= h(tr('Same line as someone else')) ?></p>
+    </div>
+</div>
+
+<div class="mb-10">
+    <a href="/messages/detail" class="inline-flex w-full items-center justify-center rounded-xl bg-gradient-to-r from-sky-600 to-indigo-600 px-6 py-3.5 text-base font-semibold text-white shadow-lg shadow-sky-600/25 transition hover:from-sky-500 hover:to-indigo-500 sm:w-auto">
+        <?= h(tr('Share a line')) ?>
+    </a>
+    <div class="mt-5 flex flex-col gap-2 text-sm sm:flex-row sm:gap-8">
+        <a class="font-medium text-brand-600 transition hover:text-brand-800" href="/linked-victims"><?= h(tr('View linked victims')) ?></a>
+        <a class="font-medium text-brand-600 transition hover:text-brand-800" href="/messages/list"><?= h(tr('Browse everything you saved')) ?></a>
+    </div>
+</div>
+
+<div class="rounded-2xl border border-slate-200/80 bg-slate-50/60 p-6 ring-1 ring-slate-900/[0.02]">
+    <h2 class="text-sm font-semibold text-slate-900"><?= h(tr('Recent activity')) ?></h2>
+    <?php if (empty($d['recent_phrases'])): ?>
+        <div class="mt-5 flex flex-col items-center rounded-xl border border-dashed border-slate-200 bg-white/80 py-12 text-center shadow-inner">
+            <div class="mb-3 flex h-12 w-12 items-center justify-center rounded-full bg-slate-100 text-slate-400" aria-hidden="true">
+                <svg class="h-6 w-6" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M12 6v6h4.5m4.5 0a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+            </div>
+            <p class="max-w-xs text-sm text-slate-600"><?= h(tr('No activity yet. Share your first line above.')) ?></p>
+            <a href="/messages/detail" class="mt-5 text-sm font-semibold text-brand-600 hover:text-brand-800"><?= h(tr('Share a line')) ?></a>
+        </div>
+    <?php else: ?>
+        <ul class="mt-4 divide-y divide-slate-100 rounded-xl border border-slate-100 bg-white">
+            <?php foreach ($d['recent_phrases'] as $row): ?>
+                <li class="px-4 py-3 text-sm text-slate-800"><?= h($row['content']) ?></li>
+            <?php endforeach; ?>
+        </ul>
+    <?php endif; ?>
+</div>
+
+<p class="mt-10 rounded-2xl border border-sky-100 bg-gradient-to-br from-sky-50/90 to-indigo-50/50 p-5 text-sm leading-relaxed text-slate-600 ring-1 ring-sky-900/[0.04]">
+    <span class="font-semibold text-sky-900"><?= h(tr('Privacy')) ?>:</span>
+    <?= h(tr('Only people who saved the exact same line can find each other. Nothing here is public.')) ?>
+</p>

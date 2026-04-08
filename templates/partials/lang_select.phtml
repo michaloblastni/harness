@@ -1,0 +1,21 @@
+<?php
+$current = function_exists('i18n_lang') ? i18n_lang() : 'en';
+$base = request_path() . '?lang=';
+?>
+<div class="flex shrink-0 items-center">
+    <label for="harness-lang" class="sr-only"><?= h(tr('Language')) ?></label>
+    <div class="relative">
+        <select id="harness-lang" name="lang"
+                class="h-8 w-[3.25rem] cursor-pointer appearance-none rounded-lg border border-slate-200/90 bg-white py-1 pl-1.5 pr-5 text-center text-xs font-bold uppercase tracking-wide text-slate-600 shadow-sm ring-1 ring-slate-900/[0.04] focus:border-brand-500 focus:outline-none focus:ring-1 focus:ring-brand-500/30"
+                data-lang-base="<?= h($base) ?>"
+                onchange="window.location.href = this.dataset.langBase + encodeURIComponent(this.value);"
+                title="<?= h(tr('Language')) ?>">
+            <?php foreach (i18n_languages() as $code => $meta): ?>
+                <option value="<?= h($code) ?>" title="<?= h($meta['native']) ?>"<?= $current === $code ? ' selected' : '' ?>><?= h($meta['tag']) ?></option>
+            <?php endforeach; ?>
+        </select>
+        <svg class="pointer-events-none absolute right-1 top-1/2 h-3 w-3 -translate-y-1/2 text-slate-400" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" aria-hidden="true">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"/>
+        </svg>
+    </div>
+</div>

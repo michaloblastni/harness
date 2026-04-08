@@ -1,0 +1,37 @@
+<?php
+/** @var string $supportEmail */
+$supportEmail = $supportEmail ?? harness_support_email();
+?>
+<article class="max-w-none">
+    <p class="text-sm font-semibold text-sky-700"><?= h(tr('Harness')) ?></p>
+    <h1 class="mt-2 text-3xl font-bold tracking-tight text-slate-900"><?= h(tr('Privacy policy — Harness')) ?></h1>
+    <p class="mt-2 text-sm text-slate-500"><?= h(sprintf(tr('Last updated: %s.'), '2026-04-02')) ?></p>
+
+    <h2 class="mt-10 text-xl font-semibold text-slate-900"><?= h(tr('Who we are')) ?></h2>
+    <p class="text-slate-600"><?= h(tr('Harness operates this website and registration-based service for users who create an account.')) ?></p>
+
+    <h2 class="mt-8 text-xl font-semibold text-slate-900"><?= h(tr('Data we process')) ?></h2>
+    <ul class="list-disc space-y-2 pl-5 text-slate-600">
+        <li><?= h(tr('Account information you provide: username, email address, and a password hash.')) ?></li>
+        <li><?= h(tr('Lines you save: the exact text you submit is stored so the service can detect identical matches with other accounts.')) ?></li>
+        <li><?= h(tr('Technical data such as server logs, session cookies, and security-related records needed to run and protect the service.')) ?></li>
+    </ul>
+
+    <h2 class="mt-8 text-xl font-semibold text-slate-900"><?= h(tr('Cookies and similar technologies')) ?></h2>
+    <p class="text-slate-600"><?= h(tr('We use strictly necessary cookies for sign-in and security. Optional cookies are used only if you allow them in the cookie banner.')) ?></p>
+
+    <h2 class="mt-8 text-xl font-semibold text-slate-900"><?= h(tr('Why we use data')) ?></h2>
+    <p class="text-slate-600"><?= h(tr('To provide accounts, store your saved lines, find identical lines between accounts, and keep the service reliable and secure.')) ?></p>
+
+    <h2 class="mt-8 text-xl font-semibold text-slate-900"><?= h(tr('Sharing and disclosure')) ?></h2>
+    <p class="text-slate-600"><?= h(tr('We do not sell your personal data. We may disclose information if required by law or to protect rights and safety.')) ?></p>
+
+    <h2 class="mt-8 text-xl font-semibold text-slate-900"><?= h(tr('Retention')) ?></h2>
+    <p class="text-slate-600"><?= h(tr('We keep information while your account exists and as required by law. You can ask us to delete your data using the support contact.')) ?></p>
+
+    <h2 class="mt-8 text-xl font-semibold text-slate-900"><?= h(tr('Your rights')) ?></h2>
+    <p class="text-slate-600"><?= h(tr('Depending on where you live, you may have rights to access, correct, delete, restrict, or export your data, and to object to certain processing. Contact us to exercise these rights.')) ?></p>
+
+    <h2 class="mt-8 text-xl font-semibold text-slate-900"><?= h(tr('Privacy contact')) ?></h2>
+    <p class="text-slate-600"><?= h(sprintf(tr('For privacy requests, email us at %s (use the address you registered with if possible).'), $supportEmail)) ?></p>
+</article>

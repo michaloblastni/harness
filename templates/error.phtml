@@ -1,0 +1,61 @@
+<?php
+/**
+ * @var string $message
+ * @var string $error_class
+ * @var string $file
+ * @var int $line
+ * @var string $trace
+ * @var bool $show_technical
+ */
+$message = $message ?? '';
+$error_class = $error_class ?? '';
+$file = $file ?? '';
+$line = (int) ($line ?? 0);
+$trace = $trace ?? '';
+$show_technical = !empty($show_technical);
+?>
+<!DOCTYPE html>
+<html lang="<?= h(function_exists('i18n_html_lang') ? i18n_html_lang() : 'en-US') ?>">
+<head>
+    <?php
+    $themeColor = '#2563eb';
+    $pageTitle = tr('Error') . ' — ' . tr('Harness');
+    require __DIR__ . '/partials/html_head.phtml';
+    ?>
+</head>
+<body class="min-h-screen bg-slate-50 px-4 py-10 text-slate-800">
+<div class="mx-auto w-full max-w-3xl rounded-2xl border border-slate-200/80 bg-white/95 p-6 shadow-xl shadow-slate-200/50 backdrop-blur-sm sm:p-8">
+    <h1 class="text-xl font-bold text-slate-900"><?= h(tr('Error')) ?></h1>
+    <?php if ($message !== ''): ?>
+        <p class="mt-4 text-sm leading-relaxed text-red-700"><?= h($message) ?></p>
+    <?php else: ?>
+        <p class="mt-4 text-sm text-slate-500"><?= h(tr('No error message available')) ?></p>
+    <?php endif; ?>
+
+    <?php if ($show_technical && $error_class !== ''): ?>
+        <dl class="mt-6 space-y-1 border-t border-slate-100 pt-6 text-left text-sm">
+            <div class="flex flex-wrap gap-x-2">
+                <dt class="font-medium text-slate-500">Type</dt>
+                <dd class="font-mono text-slate-800"><?= h($error_class) ?></dd>
+            </div>
+            <?php if ($file !== ''): ?>
+                <div class="flex flex-wrap gap-x-2">
+                    <dt class="font-medium text-slate-500">Location</dt>
+                    <dd class="break-all font-mono text-xs text-slate-700"><?= h($file) ?><span class="text-slate-500">:<?= (int) $line ?></span></dd>
+                </div>
+            <?php endif; ?>
+        </dl>
+    <?php endif; ?>
+
+    <?php if ($show_technical && $trace !== ''): ?>
+        <details class="mt-6 text-left" open>
+            <summary class="cursor-pointer select-none text-sm font-semibold text-slate-700 hover:text-slate-900">Stack trace</summary>
+            <pre class="mt-3 max-h-[min(28rem,55vh)] overflow-auto rounded-xl border border-slate-200 bg-slate-50 p-4 text-xs leading-relaxed text-slate-800"><?= h($trace) ?></pre>
+            <p class="mt-2 text-xs text-slate-500">Passwords, DSNs, and similar values are redacted in this view. Set <span class="font-mono">HARNESS_PRODUCTION=1</span> to hide technical details for end users.</p>
+        </details>
+    <?php endif; ?>
+
+    <a class="mt-8 inline-block text-sm font-semibold text-brand-600 hover:text-brand-800" href="/"><?= h(tr('Back to Home Page')) ?></a>
+</div>
+</body>
+</html>

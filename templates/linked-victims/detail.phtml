@@ -1,0 +1,57 @@
+<?php
+/**
+ * @var array{
+ *   username:string,
+ *   email:string,
+ *   shared_phrases:list<array{content:string,saved_at:?string}>,
+ *   their_phrases:list<array{content:string,saved_at:?string}>
+ * } $linked
+ */
+?>
+<p class="text-sm font-semibold text-sky-700"><?= h(tr('Linked victims')) ?></p>
+<h1 class="mt-2 text-3xl font-bold tracking-tight text-slate-900"><?= h($linked['username']) ?></h1>
+
+<div class="mt-8 rounded-2xl border border-slate-200/80 bg-gradient-to-br from-slate-50 to-sky-50/30 p-5 ring-1 ring-slate-900/[0.02]">
+    <p class="text-xs font-medium text-slate-500"><?= h(tr('Email')) ?></p>
+    <a class="mt-1 inline-block break-all font-semibold text-brand-700 hover:text-brand-900" href="mailto:<?= h($linked['email']) ?>?subject=<?= rawurlencode(tr('Harness — hello')) ?>"><?= h($linked['email']) ?></a>
+    <p class="mt-3 text-sm text-slate-600"><?= h(tr('Reach out only if you feel safe doing so.')) ?></p>
+</div>
+
+<h2 class="mt-10 text-sm font-semibold text-slate-900"><?= h(tr('Lines you both saved')) ?></h2>
+<?php if (empty($linked['shared_phrases'])): ?>
+    <p class="mt-2 text-sm text-slate-500"><?= h(tr('No shared phrases in the database (unexpected if you are linked).')) ?></p>
+<?php else: ?>
+    <ul class="mt-4 divide-y divide-slate-100 rounded-2xl border border-slate-200/80 bg-white shadow-sm">
+        <?php foreach ($linked['shared_phrases'] as $row): ?>
+            <li class="px-4 py-3 text-slate-800">
+                <p><?= h($row['content']) ?></p>
+                <?php
+                $t = harness_format_saved_at($row['saved_at'] ?? null);
+                if ($t !== ''): ?>
+                    <p class="mt-1 text-xs text-slate-500"><?= h(tr('They saved at')) ?> <?= h($t) ?></p>
+                <?php endif; ?>
+            </li>
+        <?php endforeach; ?>
+    </ul>
+<?php endif; ?>
+
+<h2 class="mt-10 text-sm font-semibold text-slate-900"><?= h(tr('Their other notes')) ?></h2>
+<p class="mt-2 text-sm text-slate-500"><?= h(tr('Everything they have saved. The list above shows the lines that linked you as victims.')) ?></p>
+<?php if (empty($linked['their_phrases'])): ?>
+    <p class="mt-2 text-sm text-slate-500"><?= h(tr('They have not recorded any other phrases yet.')) ?></p>
+<?php else: ?>
+    <ul class="mt-4 divide-y divide-slate-100 rounded-2xl border border-slate-200/80 bg-slate-50/50">
+        <?php foreach ($linked['their_phrases'] as $row): ?>
+            <li class="px-4 py-3 text-sm text-slate-700">
+                <p><?= h($row['content']) ?></p>
+                <?php
+                $t = harness_format_saved_at($row['saved_at'] ?? null);
+                if ($t !== ''): ?>
+                    <p class="mt-1 text-xs text-slate-500"><?= h(tr('They saved at')) ?> <?= h($t) ?></p>
+                <?php endif; ?>
+            </li>
+        <?php endforeach; ?>
+    </ul>
+<?php endif; ?>
+
+<a href="/linked-victims" class="mt-10 inline-block text-sm font-semibold text-brand-600 hover:text-brand-800"><?= h(tr('Back to linked victims')) ?></a>

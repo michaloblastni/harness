@@ -1,0 +1,4 @@
+/**
+ * Harness — optional legacy hook. UI is styled with Tailwind (CDN) in templates.
+ * Keep file so /css/harness.css never 404s if linked elsewhere.
+ */

@@ -1,0 +1,724 @@
+# Czech translations for Harness (domain: harness).
+# Regenerate binary with: msgfmt -o harness.mo harness.po
+msgid ""
+msgstr ""
+"Project-Id-Version: Harness\n"
+"Language: cs_CZ\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\n"
+
+msgid "Harness"
+msgstr "Harness"
+
+msgid "English"
+msgstr "Anglicky"
+
+msgid "Czech"
+msgstr "Česky"
+
+msgid "Toggle navigation"
+msgstr "Přepnout navigaci"
+
+msgid "Home"
+msgstr "Domů"
+
+msgid "Linked Victims"
+msgstr "Propojené oběti"
+
+msgid "Profile"
+msgstr "Profil"
+
+msgid "Settings"
+msgstr "Nastavení"
+
+msgid "Logout"
+msgstr "Odhlásit se"
+
+msgid "EN"
+msgstr "EN"
+
+msgid "CZ"
+msgstr "CZ"
+
+msgid "Privacy Policy"
+msgstr "Zásady ochrany osobních údajů"
+
+msgid "About"
+msgstr "O aplikaci"
+
+msgid "Support"
+msgstr "Podpora"
+
+msgid "HARNESS"
+msgstr "HARNESS"
+
+msgid "Private. Protected. Connected."
+msgstr "Soukromé. Chráněné. Propojené."
+
+msgid "Error"
+msgstr "Chyba"
+
+msgid "No error message available"
+msgstr "Žádná chybová zpráva"
+
+msgid "Back to Home Page"
+msgstr "Zpět na hlavní stránku"
+
+msgid "%s's Messages"
+msgstr "Zprávy uživatele %s"
+
+msgid "Get in touch with this user at:"
+msgstr "Kontakt na tohoto uživatele:"
+
+msgid "Back to linked victims"
+msgstr "Zpět na propojení uživatelů"
+
+msgid "Back to account settings"
+msgstr "Zpět do nastavení účtu"
+
+msgid "You don't have any linked victims, yet."
+msgstr "Zatím nemáte žádné propojené uživatele."
+
+msgid "Forgotten Password"
+msgstr "Zapomenuté heslo"
+
+msgid "Enter your username or the email you registered with. If we find an account with a password, we will email you a reset link."
+msgstr "Zadejte uživatelské jméno nebo e-mail z registrace. Pokud najdeme účet s heslem, pošleme vám odkaz na obnovení."
+
+msgid "Username or email"
+msgstr "Uživatelské jméno nebo e-mail"
+
+msgid "Send reset link"
+msgstr "Odeslat odkaz"
+
+msgid "If an account matches, we sent password reset instructions to its email."
+msgstr "Pokud účet existuje, zaslali jsme na jeho e-mail pokyny k obnovení hesla."
+
+msgid "Please enter your username or email."
+msgstr "Zadejte uživatelské jméno nebo e-mail."
+
+msgid "Reset link invalid or expired."
+msgstr "Odkaz na obnovení je neplatný nebo vypršel."
+
+msgid "Reset your password"
+msgstr "Obnovení hesla"
+
+msgid "This reset link is invalid or has expired. Request a new one from the sign-in page."
+msgstr "Tento odkaz je neplatný nebo vypršel. Požádejte o nový na přihlašovací stránce."
+
+msgid "Choose a new password for your account."
+msgstr "Zvolte si nové heslo k účtu."
+
+msgid "New password"
+msgstr "Nové heslo"
+
+msgid "Confirm new password"
+msgstr "Potvrzení nového hesla"
+
+msgid "Set new password"
+msgstr "Nastavit nové heslo"
+
+msgid "Your password has been reset. You can sign in now."
+msgstr "Heslo bylo změněno. Nyní se můžete přihlásit."
+
+msgid "Back to Sign In"
+msgstr "Zpět k přihlášení"
+
+msgid "Welcome Back"
+msgstr "Vítejte zpět"
+
+msgid "Username"
+msgstr "Uživatelské jméno"
+
+msgid "Password"
+msgstr "Heslo"
+
+msgid "Toggle password visibility"
+msgstr "Zobrazit nebo skrýt heslo"
+
+msgid "Remember me"
+msgstr "Zapamatovat si mě"
+
+msgid "Forgot password?"
+msgstr "Zapomněli jste heslo?"
+
+msgid "Sign In"
+msgstr "Přihlásit se"
+
+msgid "Sign Up"
+msgstr "Registrovat se"
+
+msgid "Registration"
+msgstr "Registrace"
+
+msgid "Email"
+msgstr "E-mail"
+
+msgid "Confirm Password"
+msgstr "Potvrzení hesla"
+
+msgid "Register"
+msgstr "Registrovat se"
+
+msgid "Add Insult"
+msgstr "Přidat urážku"
+
+msgid "Message Content"
+msgstr "Obsah zprávy"
+
+msgid "Submit"
+msgstr "Odeslat"
+
+msgid "Hello! Welcome to our website!"
+msgstr "Ahoj! Vítej na našich stránkách!"
+
+msgid "Profile ID:"
+msgstr "ID profilu:"
+
+msgid "Insults"
+msgstr "Urážky"
+
+msgid "Linked victims:"
+msgstr "Propojení uživatelé:"
+
+msgid "No messages yet."
+msgstr "Zatím žádné zprávy."
+
+msgid "Add message"
+msgstr "Přidat zprávu"
+
+msgid "Main!"
+msgstr "Hlavní!"
+
+msgid "Review notifications"
+msgstr "Zkontrolovat upozornění"
+
+msgid "User not found"
+msgstr "Uživatel nenalezen"
+
+msgid "Page not found: %s"
+msgstr "Stránka nenalezena: %s"
+
+msgid "Invalid CSRF token"
+msgstr "Neplatný CSRF token"
+
+msgid "Message content is required."
+msgstr "Obsah zprávy je povinný."
+
+msgid "Your username and password is invalid."
+msgstr "Neplatné uživatelské jméno nebo heslo."
+
+msgid "You have been logged out due to inactivity."
+msgstr "Byli jste odhlášeni z důvodu nečinnosti."
+
+msgid "You have been logged out successfully."
+msgstr "Byli jste úspěšně odhlášeni."
+
+msgid "Username cannot be empty!"
+msgstr "Uživatelské jméno nesmí být prázdné!"
+
+msgid "Username must have between 3 and 32 characters."
+msgstr "Uživatelské jméno musí mít 3 až 32 znaků."
+
+msgid "User with this username already exists."
+msgstr "Uživatel s tímto jménem již existuje."
+
+msgid "Password cannot be empty!"
+msgstr "Heslo nesmí být prázdné!"
+
+msgid "Password must have between 6 and 32 characters."
+msgstr "Heslo musí mít 6 až 32 znaků."
+
+msgid "Passwords do not match"
+msgstr "Hesla se neshodují"
+
+msgid "Email cannot be empty!"
+msgstr "E-mail nesmí být prázdný!"
+
+msgid "Please enter a valid email address."
+msgstr "Zadejte platnou e-mailovou adresu."
+
+msgid "Poong!"
+msgstr "Pong!"
+
+msgid "Built for clarity and trust"
+msgstr "Postaveno na srozumitelnosti a důvěře"
+
+msgid "Plain language, obvious next steps, and a calm workspace—so you can focus on what matters."
+msgstr "Prostý jazyk, jasné další kroky a klidné prostředí—abyste se mohli soustředit na to podstatné."
+
+msgid "Sign in with your username and password."
+msgstr "Přihlaste se uživatelským jménem a heslem."
+
+msgid "This email is already registered with a password. Sign in with your username and password."
+msgstr "Tento e-mail je již zaregistrován s heslem. Přihlaste se uživatelským jménem a heslem."
+
+msgid "This is the name you picked on the registration screen—not your email."
+msgstr "Jde o jméno z registračního formuláře—ne váš e-mail."
+
+msgid "Create your account in a minute. You can change these details later with support."
+msgstr "Účet vytvoříte za chvíli. Údaje lze později upravit s podporou."
+
+msgid "Pick something memorable—this is what you will type to sign in."
+msgstr "Zvolte si něco zapamatovatelného—budete to zadávat při přihlášení."
+
+msgid "Your workspace"
+msgstr "Vaše pracovní prostředí"
+
+msgid "Nothing recorded yet. When you log a phrase, it will appear here."
+msgstr "Zatím nic nezaznamenáno. Po přidání fráze se zobrazí zde."
+
+msgid "Your case file is empty. Add the exact words you heard to start building your record."
+msgstr "Váš spis je prázdný. Přidejte přesná slova, která jste slyšeli, a začněte budovat záznam."
+
+msgid "Private notes & connections"
+msgstr "Soukromé poznámky a bezpečné propojení"
+
+msgid "Connections"
+msgstr "Propojení"
+
+msgid "Your notes"
+msgstr "Vaše poznámky"
+
+msgid "Language"
+msgstr "Jazyk"
+
+msgid "Summary"
+msgstr "Shrnutí"
+
+msgid "Your dashboard"
+msgstr "Vaše nástěnka"
+
+msgid "Welcome"
+msgstr "Vítejte"
+
+msgid "Write down what was said, using the same words you heard. If someone else writes the same thing, Harness can help you connect—safely, and only when the words match exactly."
+msgstr "Zapište přesně to, co jste slyšeli, stejnými slovy. Když někdo jiný napíše totéž, Harness vám může pomoci se spojit—bezpečně a jen když se slova přesně shodují."
+
+msgid "Notes saved"
+msgstr "Uložené poznámky"
+
+msgid "Things you wrote down"
+msgstr "Co jste zapsali"
+
+msgid "People"
+msgstr "Lidé"
+
+msgid "You may be able to reach out"
+msgstr "Můžete se pokusit spojit"
+
+msgid "Matches"
+msgstr "Shody"
+
+msgid "Notes that link you to someone"
+msgstr "Poznámky, které vás s někým spojují"
+
+msgid "Add a note"
+msgstr "Přidat poznámku"
+
+msgid "See who you are connected to"
+msgstr "Kdo je s vámi propojen"
+
+msgid "View all your notes"
+msgstr "Všechny vaše poznámky"
+
+msgid "Latest notes"
+msgstr "Poslední poznámky"
+
+msgid "Nothing here yet. Add your first note above."
+msgstr "Zatím tu nic není. Přidejte první poznámku výše."
+
+msgid "Privacy"
+msgstr "Soukromí"
+
+msgid "Only people who saved the exact same words can find each other. There is no public list."
+msgstr "Vidí se jen lidé, kteří uložili přesně stejná slova. Veřejný seznam neexistuje."
+
+msgid "Simple screens and clear language—so you always know what to do next."
+msgstr "Jednoduché obrazovky a srozumitelný jazyk—vždy víte, co dělat dál."
+
+msgid "New note"
+msgstr "Nová poznámka"
+
+msgid "Write exactly what you heard. Matching only works if the words are the same."
+msgstr "Pište přesně to, co jste slyšeli. Shoda funguje jen při stejných slovech."
+
+msgid "What was said"
+msgstr "Co bylo řečeno"
+
+msgid "Save to my notes"
+msgstr "Uložit do mých poznámek"
+
+msgid "See connections"
+msgstr "Zobrazit propojení"
+
+msgid "Everything you saved"
+msgstr "Vše, co máte uloženo"
+
+msgid "If a line shows names, those people heard the same exact words."
+msgstr "U řádku se jmény jde o lidi, kteří slyšeli stejná slova."
+
+msgid "Your entries"
+msgstr "Vaše záznamy"
+
+msgid "Also heard by:"
+msgstr "Také slyšeli:"
+
+msgid "Add another note"
+msgstr "Další poznámka"
+
+msgid "People connected to you"
+msgstr "Lidé propojení s vámi"
+
+msgid "You only see someone here if you both saved the exact same words."
+msgstr "Někoho tu uvidíte jen tehdy, když jste oba uložili přesně stejná slova."
+
+msgid "No one yet"
+msgstr "Zatím nikdo"
+
+msgid "When you and another person write the same sentence, they will show up here."
+msgstr "Až napíšete stejnou větu jako někdo jiný, objeví se zde."
+
+msgid "Same wording"
+msgstr "Stejná formulace"
+
+msgid "View details"
+msgstr "Podrobnosti"
+
+msgid "Harness — message"
+msgstr "Harness — zpráva"
+
+msgid "Words you both saved"
+msgstr "Slova, která jste oba uložili"
+
+msgid "Reach out only if you feel safe doing so."
+msgstr "Ozývejte se jen tehdy, když se cítíte bezpečně."
+
+msgid "Their other notes"
+msgstr "Jejich další poznámky"
+
+msgid "Everything they have saved. The list above is what connected you."
+msgstr "Vše, co uložili. Seznam výše je to, co vás spojilo."
+
+msgid "Back to connections"
+msgstr "Zpět na propojení"
+
+msgid "Please add what you heard."
+msgstr "Napište prosím to, co jste slyšeli."
+
+msgid "That person is not in your connections, or the account does not exist."
+msgstr "Tato osoba není ve vašich propojeních, nebo účet neexistuje."
+
+msgid "Harness — hello"
+msgstr "Harness — ahoj"
+
+msgid "Toggle password visibility"
+msgstr "Zobrazit nebo skrýt heslo"
+
+msgid "English (US)"
+msgstr "Angličtina (USA)"
+
+msgid "Match safely. Connect on your terms."
+msgstr "Bezpečné párování. Spojení podle vašich pravidel."
+
+msgid "Your home"
+msgstr "Přehled"
+
+msgid "Save what you heard, word for word. When someone else saves the same line, Harness helps you find each other—in private, and only when the text matches exactly."
+msgstr "Uložte přesně to, co jste slyšeli, slovo od slova. Když někdo jiný uloží stejný řádek, Harness vám pomůže se najít—soukromě a jen když se text přesně shoduje."
+
+msgid "Your saves"
+msgstr "Vaše uložené"
+
+msgid "Lines you added"
+msgstr "Řádky, které jste přidali"
+
+msgid "You could say hi"
+msgstr "Můžete se ozvat"
+
+msgid "Same line as someone else"
+msgstr "Stejný řádek jako někdo jiný"
+
+msgid "Share a line"
+msgstr "Sdílet řádek"
+
+msgid "See who you match with"
+msgstr "S kým jste v shodě"
+
+msgid "Browse everything you saved"
+msgstr "Prohlédnout vše uložené"
+
+msgid "Recent activity"
+msgstr "Nedávná aktivita"
+
+msgid "No activity yet. Share your first line above."
+msgstr "Zatím žádná aktivita. Sdílejte první řádek výše."
+
+msgid "Only people who saved the exact same line can find each other. Nothing here is public."
+msgstr "Najdou se jen lidé, kteří uložili přesně stejný řádek. Nic tu není veřejné."
+
+msgid "Friendly, simple screens—so you always know your next step."
+msgstr "Přátelské, jednoduché obrazovky—vždy víte, co dělat dál."
+
+msgid "Type the line exactly as you heard it. We only match when the line is the same, word for word."
+msgstr "Zadejte řádek přesně tak, jak jste ho slyšeli. Shodujeme jen když je řádek stejný, slovo od slova."
+
+msgid "What did you hear?"
+msgstr "Co jste slyšeli?"
+
+msgid "Paste or type the line exactly as you heard it…"
+msgstr "Vložte nebo napište řádek přesně tak, jak jste ho slyšeli…"
+
+msgid "Save to my feed"
+msgstr "Uložit do mého kanálu"
+
+msgid "See your matches"
+msgstr "Zobrazit shody"
+
+msgid "If you see names on a line, those people heard the same exact wording."
+msgstr "Uvidíte-li jména u řádku, tito lidé slyšeli stejné znění."
+
+msgid "Same line for:"
+msgstr "Stejný řádek pro:"
+
+msgid "Share another line"
+msgstr "Sdílet další řádek"
+
+msgid "You have not saved anything yet. Add the exact line you heard to get started."
+msgstr "Zatím jste nic neuložili. Přidejte přesný řádek, který jste slyšeli, a začněte."
+
+msgid "People you match with"
+msgstr "Lidé, se kterými jste v shodě"
+
+msgid "Someone shows up here only when you both saved the exact same line."
+msgstr "Někdo se zde objeví jen tehdy, když jste oba uložili přesně stejný řádek."
+
+msgid "When you and someone else save the same sentence, they will appear here."
+msgstr "Až vy a někdo jiný uložíte stejnou větu, objeví se zde."
+
+msgid "Shared lines"
+msgstr "Sdílené řádky"
+
+msgid "Everything they have saved. The list above is what matched you."
+msgstr "Vše, co uložili. Seznam výše je to, co vás spojilo ve shodě."
+
+msgid "Lines you both saved"
+msgstr "Řádky, které jste oba uložili"
+
+msgid "Your feed"
+msgstr "Váš kanál"
+
+msgid "Linked victims"
+msgstr "Propojené oběti"
+
+msgid "A linked victim appears here only when you both saved the exact same line."
+msgstr "Propojená oběť se zde zobrazí jen tehdy, když jste oba uložili přesně stejný řádek."
+
+msgid "No linked victims yet"
+msgstr "Zatím žádné propojené oběti"
+
+msgid "When another victim logs the same line you saved, they will appear as a linked victim here."
+msgstr "Když jiná oběť uloží stejný řádek jako vy, zobrazí se zde jako propojená oběť."
+
+msgid "View linked victims"
+msgstr "Zobrazit propojené oběti"
+
+msgid "Victims who share at least one exact line with you"
+msgstr "Oběti, které s vámi sdílejí alespoň jeden přesný řádek"
+
+msgid "Everything they have saved. The list above shows the lines that linked you as victims."
+msgstr "Vše, co uložili. Seznam výše ukazuje řádky, které vás propojily jako oběti."
+
+msgid "That person is not among your linked victims, or the account does not exist."
+msgstr "Tato osoba není mezi vašimi propojenými oběťmi, nebo účet neexistuje."
+
+msgid "Cookie consent"
+msgstr "Souhlas s cookies"
+
+msgid "Cookies on Harness"
+msgstr "Cookies na Harnessu"
+
+msgid "We use essential cookies to run the service (e.g. session and security). With your permission we may use additional cookies to improve the product. You can change your mind anytime by clearing site data."
+msgstr "K běhu služby potřebujeme nezbytné cookies (např. relaci a zabezpečení). S vaším souhlasem můžeme používat další cookies ke zlepšení produktu. Svůj souhlas můžete kdykoli změnit vymazáním dat webu."
+
+msgid "Reject non-essential"
+msgstr "Odmítnout nepodstatné"
+
+msgid "Accept all"
+msgstr "Přijmout vše"
+
+msgid "How it works"
+msgstr "Jak to funguje"
+
+msgid "How matching works"
+msgstr "Jak funguje párování"
+
+msgid "Step 1 — Save the exact line"
+msgstr "Krok 1 — Uložte přesný řádek"
+
+msgid "Write what you heard, word for word, in the language and spelling you remember. Harness stores it privately with your account only."
+msgstr "Zapište, co jste slyšeli, slovo od slova, v jazyce a pravopisu, jak si to pamatujete. Harness to uloží soukromě jen k vašemu účtu."
+
+msgid "Step 2 — We look for an identical line"
+msgstr "Krok 2 — Hledáme identický řádek"
+
+msgid "The service compares your saved text with other accounts. A match means the same characters in the same order—we do not guess or fuzzy-match, so nothing is silently changed."
+msgstr "Služba porovná váš uložený text s ostatními účty. Shoda znamená stejné znaky ve stejném pořadí—nehádáme ani nepoužíváme přibližné párování, takže se nic tiše nemění."
+
+msgid "Step 3 — Linked victims (you choose contact)"
+msgstr "Krok 3 — Propojené oběti (kontakt je na vás)"
+
+msgid "If another account saved the same line, they may appear as a linked victim. Email is not shown on a public page; you decide whether to reach out."
+msgstr "Uložil-li stejný řádek jiný účet, může se zobrazit jako propojená oběť. E-mail není na veřejné stránce; rozhodujete vy, zda se ozvete."
+
+msgid "Safety first"
+msgstr "Bezpečnost na prvním místě"
+
+msgid "Only people who saved that exact line can see the mutual link. There is no public list of users or of what people saved."
+msgstr "Vzájemné propojení vidí jen lidé, kteří uložili přesně ten řádek. Neexistuje veřejný seznam uživatelů ani toho, co kdo uložil."
+
+msgid "Read the full privacy policy"
+msgstr "Přečíst úplné zásady ochrany osobních údajů"
+
+msgid "Privacy policy — Harness"
+msgstr "Zásady ochrany osobních údajů — Harness"
+
+msgid "Last updated: %s."
+msgstr "Naposledy aktualizováno: %s."
+
+msgid "Who we are"
+msgstr "Kdo jsme"
+
+msgid "Harness operates this website and registration-based service for users who create an account."
+msgstr "Harness provozuje tyto webové stránky a službu založenou na registraci pro uživatele, kteří si vytvoří účet."
+
+msgid "Data we process"
+msgstr "Jaké údaje zpracováváme"
+
+msgid "Account information you provide: username, email address, and a password hash."
+msgstr "Údaje z účtu, které zadáte: uživatelské jméno, e-mail a hash hesla."
+
+msgid "Lines you save: the exact text you submit is stored so the service can detect identical matches with other accounts."
+msgstr "Řádky, které uložíte: přesný text, který odešlete, ukládáme, aby služba mohla najít shodu s jinými účty."
+
+msgid "Technical data such as server logs, session cookies, and security-related records needed to run and protect the service."
+msgstr "Technické údaje jako protokoly serveru, relační cookies a záznamy související se zabezpečením potřebné k provozu a ochraně služby."
+
+msgid "Cookies and similar technologies"
+msgstr "Cookies a podobné technologie"
+
+msgid "We use strictly necessary cookies for sign-in and security. Optional cookies are used only if you allow them in the cookie banner."
+msgstr "Používáme nezbytně nutné cookies pro přihlášení a zabezpečení. Volitelné cookies používáme jen pokud je povolíte v liště cookies."
+
+msgid "Why we use data"
+msgstr "K čemu údaje používáme"
+
+msgid "To provide accounts, store your saved lines, find identical lines between accounts, and keep the service reliable and secure."
+msgstr "K poskytování účtů, ukládání vašich řádků, nalezení shod mezi účty a udržení spolehlivosti a bezpečnosti služby."
+
+msgid "Sharing and disclosure"
+msgstr "Sdílení a zpřístupnění"
+
+msgid "We do not sell your personal data. We may disclose information if required by law or to protect rights and safety."
+msgstr "Vaše osobní údaje neprodáváme. Informace můžeme zpřístupnit, pokud to vyžaduje zákon nebo ochrana práv a bezpečnosti."
+
+msgid "Retention"
+msgstr "Uchovávání"
+
+msgid "We keep information while your account exists and as required by law. You can ask us to delete your data using the support contact."
+msgstr "Údaje uchováváme po dobu existence účtu a podle zákonných povinností. O smazání údajů můžete požádat přes kontakt podpory."
+
+msgid "Your rights"
+msgstr "Vaše práva"
+
+msgid "Depending on where you live, you may have rights to access, correct, delete, restrict, or export your data, and to object to certain processing. Contact us to exercise these rights."
+msgstr "Podle místa, kde žijete, můžete mít práva na přístup, opravu, výmaz, omezení nebo přenos údajů a na námitku proti některému zpracování. U uplatnění práv nás kontaktujte."
+
+msgid "Privacy contact"
+msgstr "Kontakt k ochraně soukromí"
+
+msgid "For privacy requests, email us at %s (use the address you registered with if possible)."
+msgstr "Ohledně soukromí napište na %s (ideálně z e-mailu, kterým jste se registrovali)."
+
+msgid "How can we help?"
+msgstr "Jak vám můžeme pomoci?"
+
+msgid "If something is wrong with your account, you have a safety concern, or you need help with privacy settings, contact us."
+msgstr "Něco nefunguje s účtem, máte obavy o bezpečnost nebo potřebujete pomoc s nastavením soukromí? Kontaktujte nás."
+
+msgid "Email us at:"
+msgstr "Napište nám na:"
+
+msgid "Include your username and a short description of the issue. We aim to reply as soon as we can."
+msgstr "Uveďte uživatelské jméno a stručný popis problému. Odpovídáme, jak nejdříve to jde."
+
+msgid "Emergency safety"
+msgstr "Nouzová bezpečnost"
+
+msgid "If you are in immediate danger, contact your local emergency services. Harness cannot provide emergency intervention."
+msgstr "Jste-li v bezprostředním ohrožení, kontaktujte místní záchranné složky. Harness neposkytuje nouzové zásahy."
+
+msgid "Feedback and suggestions"
+msgstr "Zpětná vazba a návrhy"
+
+msgid "Ideas for improving Harness are welcome—send them to the same support address."
+msgstr "Nápady na vylepšení Harnessu vítáme—pošlete je na stejnou adresu podpory."
+
+msgid "Open full guide"
+msgstr "Otevřít celý návod"
+
+msgid "Export a CSV"
+msgstr "Exportovat CSV"
+
+msgid "Saved line"
+msgstr "Uložený řádek"
+
+msgid "Linked usernames"
+msgstr "Propojení (uživatelská jména)"
+
+msgid "When two people save the exact same line of text, Harness can link their accounts in private. Matching is literal: the text must match word for word."
+msgstr "Když dvě osoby uloží přesně stejný řádek textu, Harness může jejich účty propojit soukromě. Shoda je doslovná: text se musí shodovat slovo od slova."
+
+msgid "Account settings"
+msgstr "Nastavení účtu"
+
+msgid "Manage notification preferences for your Harness account."
+msgstr "Spravujte upozornění pro váš účet Harness."
+
+msgid "Registered email"
+msgstr "Registrovaný e-mail"
+
+msgid "Email notifications"
+msgstr "E-mailová upozornění"
+
+msgid "Email me when someone new becomes linked with me"
+msgstr "Posílejte mi e-mail, když se objeví nový propojený uživatel"
+
+msgid "We send mail to your registered address when you and another user share the same saved line—whether they just matched yours or you just matched theirs."
+msgstr "Na váš registrovaný e-mail pošleme zprávu, když se s jiným uživatelem shodujete ve stejném uloženém řádku—buď proto, že právě on uložil váš řádek, nebo vy jste uložili ten jejich."
+
+msgid "Save settings"
+msgstr "Uložit nastavení"
+
+msgid "Your settings were saved."
+msgstr "Nastavení bylo uloženo."
+
+msgid "Change password"
+msgstr "Změnit heslo"
+
+msgid "Current password"
+msgstr "Současné heslo"
+
+msgid "Current password is incorrect."
+msgstr "Současné heslo není správné."
+
+msgid "Your password was changed."
+msgstr "Heslo bylo změněno."
+
+msgid "Password change is not available for accounts that sign in only with Google."
+msgstr "Změna hesla není u účtů, které se přihlašují jen přes Google, k dispozici."
+
+msgid "Use your current password, then choose a new one."
+msgstr "Zadejte současné heslo a poté nové."

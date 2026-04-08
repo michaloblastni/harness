@@ -1,0 +1,27 @@
+<?php
+/** @var array<string, list<string>> $errors */
+/** @var array{content: string} $old */
+$errors = $errors ?? [];
+$old = $old ?? ['content' => ''];
+?>
+<p class="text-sm font-semibold text-sky-700"><?= h(tr('New note')) ?></p>
+<h1 class="mt-2 text-3xl font-bold tracking-tight text-slate-900"><?= h(tr('Share a line')) ?></h1>
+<p class="mt-3 max-w-xl text-slate-600"><?= h(tr('Type the line exactly as you heard it. We only match when the line is the same, word for word.')) ?></p>
+
+<form action="/messages/detail" method="POST" class="mt-10 space-y-5">
+    <div>
+        <label class="mb-1.5 block text-sm font-medium text-slate-700" for="messageContent"><?= h(tr('What did you hear?')) ?></label>
+        <textarea id="messageContent" name="content" class="min-h-[8rem] w-full rounded-xl border border-slate-200 bg-white px-4 py-3 text-slate-900 shadow-sm ring-slate-900/[0.02] transition focus:border-brand-500 focus:outline-none focus:ring-2 focus:ring-brand-500/20" rows="5" required
+                  placeholder="<?= h(tr('Paste or type the line exactly as you heard it…')) ?>"><?= h($old['content']) ?></textarea>
+        <?php if (!empty($errors['content'])): ?>
+            <div class="mt-2 text-sm text-red-600"><?php foreach ($errors['content'] as $msg) {
+                echo '<p>' . h($msg) . '</p>';
+            } ?></div>
+        <?php endif; ?>
+    </div>
+    <input type="hidden" name="_csrf" value="<?= h($csrf) ?>"/>
+    <div class="flex flex-wrap gap-3">
+        <button type="submit" class="rounded-xl bg-gradient-to-r from-sky-600 to-indigo-600 px-5 py-2.5 text-sm font-semibold text-white shadow-md shadow-sky-600/20 hover:from-sky-500 hover:to-indigo-500"><?= h(tr('Save to my feed')) ?></button>
+        <a href="/linked-victims" class="rounded-xl border border-slate-200 bg-white px-5 py-2.5 text-sm font-semibold text-slate-700 shadow-sm hover:bg-slate-50"><?= h(tr('View linked victims')) ?></a>
+    </div>
+</form>

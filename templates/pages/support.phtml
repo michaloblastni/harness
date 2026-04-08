@@ -1,0 +1,23 @@
+<?php
+/** @var string $supportEmail */
+$supportEmail = $supportEmail ?? harness_support_email();
+?>
+<article class="max-w-none">
+    <p class="text-sm font-semibold text-sky-700"><?= h(tr('Harness')) ?></p>
+    <h1 class="mt-2 text-3xl font-bold tracking-tight text-slate-900"><?= h(tr('Support')) ?></h1>
+
+    <h2 class="mt-8 text-xl font-semibold text-slate-900"><?= h(tr('How can we help?')) ?></h2>
+    <p class="text-slate-600"><?= h(tr('If something is wrong with your account, you have a safety concern, or you need help with privacy settings, contact us.')) ?></p>
+
+    <h2 class="mt-8 text-xl font-semibold text-slate-900"><?= h(tr('Email us at:')) ?></h2>
+    <p class="text-slate-600">
+        <a class="font-semibold text-brand-600 hover:text-brand-800 break-all" href="mailto:<?= h($supportEmail) ?>"><?= h($supportEmail) ?></a>
+    </p>
+    <p class="text-slate-600"><?= h(tr('Include your username and a short description of the issue. We aim to reply as soon as we can.')) ?></p>
+
+    <h2 class="mt-8 text-xl font-semibold text-slate-900"><?= h(tr('Emergency safety')) ?></h2>
+    <p class="text-slate-600"><?= h(tr('If you are in immediate danger, contact your local emergency services. Harness cannot provide emergency intervention.')) ?></p>
+
+    <h2 class="mt-8 text-xl font-semibold text-slate-900"><?= h(tr('Feedback and suggestions')) ?></h2>
+    <p class="text-slate-600"><?= h(tr('Ideas for improving Harness are welcome—send them to the same support address.')) ?></p>
+</article>

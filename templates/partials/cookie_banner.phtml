@@ -1,0 +1,25 @@
+<?php
+if (!GeoService::cookieBannerShouldShow()) {
+    return;
+}
+$returnTo = GeoService::sanitizeConsentReturnPath($_SERVER['REQUEST_URI'] ?? '/');
+?>
+<div class="fixed bottom-0 left-0 right-0 z-[100] border-t border-slate-200/90 bg-white/95 px-4 py-3 shadow-[0_-12px_40px_rgba(15,23,42,0.08)] backdrop-blur-md" role="dialog" aria-modal="false" aria-label="<?= h(tr('Cookie consent')) ?>">
+    <div class="mx-auto flex max-w-4xl flex-col gap-3 sm:flex-row sm:items-center sm:justify-between sm:gap-4">
+        <div class="min-w-0 flex-1 text-sm text-slate-600">
+            <strong class="block text-slate-900"><?= h(tr('Cookies on Harness')) ?></strong>
+            <span><?= h(tr('We use essential cookies to run the service (e.g. session and security). With your permission we may use additional cookies to improve the product. You can change your mind anytime by clearing site data.')) ?></span>
+            <a class="mt-1 inline-block font-medium text-brand-600 hover:text-brand-700" href="/privacy-policy"><?= h(tr('Privacy Policy')) ?></a>
+        </div>
+        <form class="flex flex-shrink-0 flex-wrap items-center gap-2" method="post" action="/privacy/cookie-consent">
+            <input type="hidden" name="_csrf" value="<?= h($csrf) ?>"/>
+            <input type="hidden" name="return_to" value="<?= h($returnTo) ?>"/>
+            <button type="submit" name="consent_action" value="essential_only" class="rounded-xl border border-slate-200 bg-slate-100 px-4 py-2.5 text-sm font-semibold text-slate-800 transition hover:bg-slate-200">
+                <?= h(tr('Reject non-essential')) ?>
+            </button>
+            <button type="submit" name="consent_action" value="accept_all" class="rounded-xl bg-gradient-to-r from-sky-600 to-indigo-600 px-4 py-2.5 text-sm font-semibold text-white shadow-md shadow-sky-600/20 hover:from-sky-500 hover:to-indigo-500">
+                <?= h(tr('Accept all')) ?>
+            </button>
+        </form>
+    </div>
+</div>

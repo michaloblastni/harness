@@ -1,0 +1,56 @@
+<?php
+/** @var array<string, list<string>> $errors */
+/** @var array{username:string,email:string,password:string,password_confirm:string} $old */
+$errors = $errors ?? [];
+$old = $old ?? ['username' => '', 'email' => '', 'password' => '', 'password_confirm' => ''];
+?>
+<div class="rounded-2xl border border-slate-200 bg-white p-6 shadow-lg sm:p-8">
+    <h1 class="text-center text-2xl font-bold text-slate-900"><?= h(tr('Registration')) ?></h1>
+    <p class="mx-auto mt-2 max-w-sm text-center text-sm text-slate-600"><?= h(tr('Create your account in a minute. You can change these details later with support.')) ?></p>
+    <form action="/account/registration" method="post" class="mt-6 space-y-4">
+        <div>
+            <label class="mb-1 block text-sm font-medium text-slate-700" for="username"><?= h(tr('Username')) ?></label>
+            <input id="username" name="username" type="text" class="w-full rounded-lg border border-slate-300 px-3 py-2.5 text-slate-900 shadow-sm focus:border-brand-500 focus:outline-none focus:ring-2 focus:ring-brand-500/20" placeholder="john.doe"
+                   value="<?= h($old['username']) ?>" autofocus autocomplete="username"/>
+            <p class="mt-1 text-xs text-slate-500"><?= h(tr('Pick something memorable—this is what you will type to sign in.')) ?></p>
+            <?php if (!empty($errors['username'])): ?>
+                <div class="mt-1 text-sm text-red-600"><?php foreach ($errors['username'] as $msg) {
+                    echo '<p>' . h($msg) . '</p>';
+                } ?></div>
+            <?php endif; ?>
+        </div>
+        <div>
+            <label class="mb-1 block text-sm font-medium text-slate-700" for="email"><?= h(tr('Email')) ?></label>
+            <input id="email" name="email" type="email" class="w-full rounded-lg border border-slate-300 px-3 py-2.5 text-slate-900 shadow-sm focus:border-brand-500 focus:outline-none focus:ring-2 focus:ring-brand-500/20" placeholder="you@example.com"
+                   value="<?= h($old['email']) ?>" autocomplete="email"/>
+            <?php if (!empty($errors['email'])): ?>
+                <div class="mt-1 text-sm text-red-600"><?php foreach ($errors['email'] as $msg) {
+                    echo '<p>' . h($msg) . '</p>';
+                } ?></div>
+            <?php endif; ?>
+        </div>
+        <div>
+            <label class="mb-1 block text-sm font-medium text-slate-700" for="password"><?= h(tr('Password')) ?></label>
+            <input id="password" name="password" type="password" class="w-full rounded-lg border border-slate-300 px-3 py-2.5 text-slate-900 shadow-sm focus:border-brand-500 focus:outline-none focus:ring-2 focus:ring-brand-500/20" placeholder="••••••••" autocomplete="new-password"/>
+            <?php if (!empty($errors['password'])): ?>
+                <div class="mt-1 text-sm text-red-600"><?php foreach ($errors['password'] as $msg) {
+                    echo '<p>' . h($msg) . '</p>';
+                } ?></div>
+            <?php endif; ?>
+        </div>
+        <div>
+            <label class="mb-1 block text-sm font-medium text-slate-700" for="password_confirm"><?= h(tr('Confirm Password')) ?></label>
+            <input id="password_confirm" name="password_confirm" type="password" class="w-full rounded-lg border border-slate-300 px-3 py-2.5 text-slate-900 shadow-sm focus:border-brand-500 focus:outline-none focus:ring-2 focus:ring-brand-500/20" placeholder="••••••••" autocomplete="new-password"/>
+            <?php if (!empty($errors['password_confirm'])): ?>
+                <div class="mt-1 text-sm text-red-600"><?php foreach ($errors['password_confirm'] as $msg) {
+                    echo '<p>' . h($msg) . '</p>';
+                } ?></div>
+            <?php endif; ?>
+        </div>
+        <input type="hidden" name="_csrf" value="<?= h($csrf) ?>"/>
+        <div class="flex flex-col gap-3 pt-2">
+            <button class="w-full rounded-xl bg-brand-600 py-3 text-center text-base font-semibold text-white shadow-sm hover:bg-brand-700" type="submit" name="submit" value="Register"><?= h(tr('Register')) ?></button>
+            <a class="w-full rounded-xl border border-slate-300 py-3 text-center text-base font-semibold text-slate-700 hover:bg-slate-50" href="/account/login"><?= h(tr('Back to Sign In')) ?></a>
+        </div>
+    </form>
+</div>
